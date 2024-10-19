@@ -36,6 +36,11 @@ h2.author {
     font-size: large;
 }
 
+h2.create-by {
+    text-align: center;
+    font-size: small;
+}
+
 p {
     margin: 0 0 15px;
     color: #555;
