@@ -1,0 +1,193 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #eef2f3;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #4a4a4a;
+    padding-bottom: 5px;
+}
+
+h2.author {
+    text-align: center;
+    font-size: large;
+}
+
+p {
+    margin: 0 0 15px;
+    color: #555;
+    text-align: justify;
+}
+
+.chapter {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.chapter:hover, .chapter.active {
+    background-color: #e6e6e6;
+}
+
+.chapter.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #222;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #9f9f9f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .chapter h2 {
+        font-size: 1.7rem;
+    }
+
+    .chapter p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .chapter h2 {
+        font-size: 1.5rem;
+    }
+
+    .chapter p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Styling for the title */
+#title {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+#title span {
+    display: inline-block;
+    animation: fade 4s infinite;
+    opacity: 1;
+}
+
+/* Animation for fade-out and fade-in effect */
+@keyframes fade {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Delay for each letter's animation */
+#title span:nth-child(1) {
+    animation-delay: 0s;
+}
+#title span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+#title span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+#title span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+#title span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+#title span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+#title span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+#title span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+#title span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+#title span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+#title span:nth-child(11) {
+    animation-delay: 1s;
+}
+#title span:nth-child(12) {
+    animation-delay: 1.1s;
+}
+#title span:nth-child(13) {
+    animation-delay: 1.2s;
+}
