@@ -1,0 +1,12 @@
+{
+  "name": "station-eleven",
+  "version": "1.0.0",
+  "description": "The project is a website adaptation of the novel *Station Eleven* by Emily St. John Mandel, major chapters are done in plot summaries that are interactive and visually captivating. It uses particle animations, a navigation bar for fast access, and a changelog for tracked changes.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
