@@ -4,6 +4,11 @@
 
 The project is a website adaptation of the novel *Station Eleven* by Emily St. John Mandel, major chapters are done in plot summaries that are interactive and visually captivating. It uses particle animations, a navigation bar for fast access, and a changelog for tracked changes.
 
+## Website Link
+
+- **Old Version (Netlify)**: [Old Version](https://station-eleven.netlify.app)
+- **New Version (Firebase)**: [New Version](https://station-eleven-b46d9.web.app/)
+
 ## Features
 
 - **Interactive Navigation**: A home link and a changelog page allow easy navigation across the website.
