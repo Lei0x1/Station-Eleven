@@ -13,12 +13,12 @@ The **Station Eleven Project** is an interactive website adaptation of Station E
 
 | Features | Version | Description |
 |----------|---------|-------------|
-| **Responsive Design**      | v1.0.0  | Accessible across various devices. |
-| **Interactive Navigation** | v1.1.0  | Easy navigation with links to Home and Changelog pages. |
-| **Particle Animations**    | v1.1.0  | Animated background for enhanced visuals. |
+| **Responsive Design**      | v1.0.0 | Accessible across various devices. |
+| **Interactive Navigation** | v1.1.0 | Easy navigation with links to Home and Changelog pages. |
+| **Particle Animations**    | v1.1.0 | Animated background for enhanced visuals. |
 | **Documentation**          | v2.0.0 | Comprehensive documentation on GitHub. |
-| **Firebase Migration** | v2.0.0 | Successful migration from Netlify to Firebase |
-| **Chapter Summaries**      | v2.0.1 | Weekly updated summaries for freshness. |
+| **Firebase Migration**     | v2.0.0 | Successful migration from Netlify to Firebase |
+| **Chapter Summaries**      | v2.0.2 | Weekly updated summaries for freshness. |
 
 ## Future Updates
 
@@ -27,9 +27,6 @@ The **Station Eleven Project** is an interactive website adaptation of Station E
 - **Search & Enhanced Navigation**: Quickly find specific chapters or themes; expanded navbar with added sections like About, Themes, Summary, and Characters.
 
 ## Upcoming Updates
-**Release Date**: October 29, 2024
- - **New Chapter Coming**: New Chapter 37-40
-
 **Release Date**: November 3, 2024
  - **New Features Coming**: New features include Text-to-Speech and an additional chapter summary.
 
