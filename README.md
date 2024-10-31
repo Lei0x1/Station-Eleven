@@ -28,7 +28,11 @@ The **Station Eleven Project** is an interactive website adaptation of Station E
 
 ## Upcoming Updates
 **Release Date**: November 3, 2024
- - **New Features Coming**: New features include Text-to-Speech and an additional chapter summary.
+ - **New Features**:
+   - Enhanced navigation, including a dedicated Chapter section.
+   - The home page will feature an overview of the book.
+   - Dark Mode toggle for improved readability.
+   - Addition of chapter summaries.
 
 ## Contribution
 We welcome contributions! If you would like to contribute to this project, please take a moment to read the [Contribution Guidelines](docs/Contribution-Guidelines.md).
