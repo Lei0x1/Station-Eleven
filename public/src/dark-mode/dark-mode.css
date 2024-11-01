@@ -1,0 +1,93 @@
+/* dark-mode.css   */
+/* =============== */
+/* Dark Mode Style */
+/* =============== */
+.dark-mode {
+    background-color: #121212;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .navigation-bar {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #f0f0f0;
+}
+
+.dark-mode .nav-links {
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode #changelog {
+    color: white;
+}
+
+.dark-mode #title span {
+    color: white;
+}
+
+.dark-mode .author{
+    color: white;
+}
+
+.dark-mode .create-by {
+    color: white;
+}
+
+.dark-mode .nav-links a {
+    color: white;
+}
+
+.dark-mode .menu-icon {
+    color: white;
+}
+
+.dark-mode .Development p {
+    color: white;
+}
+
+/* ===================== */
+/* Dark Mode button styles */
+/* ===================== */
+#darkModeToggle {
+    padding: 6px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: small;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px;
+}
+
+/* ================= */
+/* Light mode styles */
+/* ================= */
+#darkModeToggle {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* ================ */
+/* Dark mode styles */
+/* ================ */
+.dark-mode #darkModeToggle {
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+/* ============= */
+/* Hover effects */
+/* ============= */
+#darkModeToggle:hover {
+    background-color: #ddd;
+}
+
+.dark-mode #darkModeToggle:hover {
+    background-color: #555;
+}
