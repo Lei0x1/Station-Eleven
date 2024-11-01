@@ -1,3 +1,7 @@
+/* chapter.html  */
+/* ============= */
+/* Global Styles */
+/* ============= */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #eef2f3;
@@ -16,66 +20,115 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px; /* Increased padding for easier clicking */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+
+/* ======= */
+/* Headers */
+/* ======= */
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
 h1 {
     font-size: 4em;
-    text-align: center;
     margin-bottom: 20px;
-    color: #333;
     letter-spacing: 1px;
 }
-
-.navigation-bar {
-    align-items: center;
-    display: flex;
-    font-size: small;
-    background-color: rgba(208, 208, 208, 0.8);
-    color: black;
-}
-
-a:hover {
-    background-color: rgba(100, 100, 100, 0.3); /* Add hover effect */
-}
-
-a.home-bar, a.changelog-bar, a.chapter-bar {
-    text-decoration: none;
-    font-size: small;
-    color: black;
-    padding: 3px 8px;
-}
-
 
 h2 {
     font-size: 1.5em;
     margin-top: 0;
-    color: #4a4a4a;
     padding-bottom: 5px;
 }
 
-h2.author {
+h2.author, h2.create-by {
     text-align: center;
+}
+
+h2.author {
     font-size: large;
 }
 
 h2.create-by {
-    text-align: center;
     font-size: small;
 }
 
-p {
-    margin: 0 0 15px;
-    color: #555;
-    text-align: justify;
+/* Styling for the title */
+#title {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
 }
 
-p.release-date {
-    font-size: 0.9em;
-    color: #888;
-    margin-top: 0;
-    font-style: italic;
-    text-align: left;
+#title span {
+    display: inline-block;
+    animation: fade 4s infinite;
+    opacity: 1;
 }
 
-.changelog {
+/* Delay for each letter's animation */
+#title span:nth-child(1) { animation-delay: 0s; }
+#title span:nth-child(2) { animation-delay: 0.1s; }
+#title span:nth-child(3) { animation-delay: 0.2s; }
+#title span:nth-child(4) { animation-delay: 0.3s; }
+#title span:nth-child(5) { animation-delay: 0.4s; }
+#title span:nth-child(6) { animation-delay: 0.5s; }
+#title span:nth-child(7) { animation-delay: 0.6s; }
+
+/* ============== */
+/* Navigation Bar */
+/* ============== */
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: small;
+    background-color: rgba(208, 208, 208, 0.8);
+    color: black;
+    z-index: 2;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    background-color: rgba(208, 208, 208, 0.8);
+}
+
+.nav-links a {
+    color: black;
+}
+
+a:hover {
+    background-color: rgba(100, 100, 100, 0.3);
+}
+
+a.home-bar, a.changelog-bar, a.chapter-bar, a.character-bar {
+    text-decoration: none;
+    font-size: small;
+    color: black;
+    padding: 3px 6px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ======= */
+/* Chapter */
+/* ======= */
+.chapter {
     margin-bottom: 30px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -86,15 +139,27 @@ p.release-date {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.changelog:hover, .changelog.active {
+.chapter:hover, .chapter.active {
     background-color: #e6e6e6;
 }
 
-.changelog.visible {
+.chapter.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* ==== */
+/* Text */
+/* ==== */
+p {
+    margin: 0 0 15px;
+    color: #555;
+    text-align: justify;
+}
+
+/* ===== */
+/* Lists */
+/* ===== */
 ul {
     padding-left: 20px;
 }
@@ -103,6 +168,9 @@ li {
     margin-bottom: 10px;
 }
 
+/* ================= */
+/* Background Canvas */
+/* ================= */
 canvas {
     position: fixed;
     top: 0;
@@ -112,22 +180,53 @@ canvas {
     z-index: -1;
 }
 
+/* ====== */
+/* Footer */
+/* ====== */
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #222;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #9f9f9f;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
     }
-
-    .changelog h2 {
+    .chapter h2 {
         font-size: 1.7rem;
     }
-
-    .changelog p {
+    .chapter p {
         font-size: 1rem;
     }
-
     .container {
         padding: 15px;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(208, 208, 208, 0.9);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
     }
 }
 
@@ -136,11 +235,11 @@ canvas {
         font-size: 2rem;
     }
 
-    .changelog h2 {
+    .chapter h2 {
         font-size: 1.5rem;
     }
 
-    .changelog p {
+    .chapter p {
         font-size: 0.95rem;
     }
 }
@@ -152,116 +251,5 @@ canvas {
     }
     50% {
         opacity: 0;
-    }
-}
-
-/* Styling for the title */
-#changelog {
-    font-family: 'Arial', sans-serif;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-}
-
-#changelog span {
-    display: inline-block;
-    animation: fade 4s infinite;
-    opacity: 1;
-}
-
-/* Delay for each letter's animation */
-#changelog span:nth-child(1) {
-    animation-delay: 0s;
-}
-#changelog span:nth-child(2) {
-    animation-delay: 0.1s;
-}
-#changelog span:nth-child(3) {
-    animation-delay: 0.2s;
-}
-#changelog span:nth-child(4) {
-    animation-delay: 0.3s;
-}
-#changelog span:nth-child(5) {
-    animation-delay: 0.4s;
-}
-#changelog span:nth-child(6) {
-    animation-delay: 0.5s;
-}
-#changelog span:nth-child(7) {
-    animation-delay: 0.6s;
-}
-
-/* ======================== */
-/* Speech Synthesis Manager */
-/* ======================== */
-
-.text-section {
-    margin-bottom: 20px;
-}
-
-.progress-container {
-    width: 100%;
-    height: 10px; /* Height of the progress bar */
-    background-color: #e0e0e0; /* Background color of the progress bar */
-    border-radius: 5px; /* Rounded corners for the progress bar container */
-    overflow: hidden; /* Prevent overflow */
-}
-
-.progress-bar {
-    height: 100%; /* Full height of the container */
-    width: 0; /* Start width for the progress */
-    background-color: #76c7c0; /* Color of the progress */
-    transition: width 0.1s ease; /* Smooth transition for the progress */
-}
-
-.speech-speed {
-    font-size: 10rem;
-}
-
-.control {
-    margin-top: 10px;
-}
-
-.control button {
-    margin-right: 10px; /* Spacing between buttons */
-}
-
-.control label {
-    margin-right: 5px; /* Spacing for label */
-}
-
-/* For medium screens */
-@media (max-width: 768px) {
-    .control {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px; /* Spacing between buttons */
-    }
-
-    .control button {
-        padding: 2px 5px; /* Adjust padding for better fit */
-        font-size: 0.9rem;
-        flex: 1 1 30%; /* Allow buttons to adjust size */
-        margin-right: 0; /* Remove right margin */
-    }
-}
-
-/* For smaller screens */
-@media (max-width: 480px) {
-    .control {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px; /* Spacing between buttons */
-    }
-
-    .control button {
-        padding: 1px 1px; /* Adjust padding for better fit */
-        font-size: 0.9rem;
-        flex: 1 1 30%; /* Allow buttons to adjust size */
-        margin-right: 0; /* Remove right margin */
     }
 }

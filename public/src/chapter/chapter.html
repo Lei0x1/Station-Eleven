@@ -1,84 +1,599 @@
+<!-- Created by Lei0x1 -->
+<!-- Licensed under Apache 2.0 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Station Eleven</title>
+    <title>Station Eleven | Chapter </title>
+    <link rel="icon" href="img/pandemic.png" type="image/png">
     <link rel="stylesheet" href="chapter.css">
+    <link rel="stylesheet" href="../dark-mode/dark-mode.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-    <canvas id="particleCanvas"></canvas>
-        <!-- Navigation Bar -->
-        <div class="navigation-bar">
-            <!-- Home -->
-            <a class="home-bar" href="../../index.html"><i class="fas fa-home"></i> Home </a>
+        <canvas id="particleCanvas"></canvas>
+            <!-- Navigation Bar -->
+            <div class="navigation-bar">
+                <!-- Hamburger Menu Icon for Smaller Devices -->
+                <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">☰</div>
+                <div class="nav-links">
+                    <!-- Home -->
+                    <a class="home-bar" href="../../index.html"><i class="fas fa-home"></i> Home </a>
 
-            <!-- Changelog -->
-            <a class="changelog-bar" href="../changelog/changelog.html"><i class="fas fa-file-alt"></i> Changelog </a>
+                    <!-- Chapter -->
+                    <a class="chapter-bar" href="chapter.html"><i class="fas fa-book"></i> Chapter </a>
 
-            <!-- Chapter -->
-            <a class="chapter-bar" href="chapter.html"><i class="fas fa-book"></i> Chapter </a>
-        </div>
+                    <!-- Character -->
+                    <a class="character-bar" href="../Development/development.html"><i class="fas fa-user"></i> Character</a>
 
-        <!-- Title -->
-        <h1 id="changelog">
-            <span>C</span><span>h</span><span>a</span><span>p</span><span>t</span><span>e</span><span>r</span>
-        </h1>
-        <h2 class="author">by Emily St. John Mandel</h2>
-        <h2 class="create-by"> Created by Lei0x1 <a href="https://github.com/Lei0x1" target="_blank"><i class="fab fa-github"></i></a></h2>
+                    <!-- Changelog -->
+                    <a class="changelog-bar" href="../changelog/changelog.html"><i class="fas fa-file-alt"></i> Changelog </a>
+                </div>
 
-        <!-- Version 2.0.2-->
-        <div class="changelog">
-            <h2>Chapter 1</h2>
-            <ul>
-                <div class="text-section" data-id="1">
-                    <div class="text-to-read">
-                        <p>On the night King Lear opens at the Elgin Theatre, Arthur Leander collapses in a heap halfway through the show. Jeevan, an audience member and paramedic in training, leaps onto the stage to try and save him. He starts CPR with the help of a cardiologist in the audience, but Arthur cannot be revived. </p>
+                <!-- Dark Mode Toggle -->
+                <button id="darkModeToggle">Dark Mode</button>
+            </div>
+
+            <!-- Title -->
+            <h1 id="title">
+                <span>C</span><span>h</span><span>a</span><span>p</span><span>t</span><span>e</span><span>r</span> 
+            </h1>
+            <h2 class="author">by Emily St. John Mandel</h2>
+            <h2 class="create-by">
+                Created by Lei0x1
+                <a href="https://github.com/Lei0x1" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </h2>
+
+            <!-- Chapter 1 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 1:</h2>
+                <ul>
+                    <li>
+                        <p>On the night King Lear opens at the Elgin Theatre, Arthur Leander collapses in a heap halfway through the show. Jeevan, an audience member and paramedic in training, leaps onto the stage to try and save him. He starts CPR with the help of a cardiologist in the audience, but Arthur cannot be revived.</p>
+                    </li>
+                    <li>
                         <p>Jeevan comforts the young girl Kirsten and makes a resolution that he has to find her guardian. Closing the door, he feels guilt at having survived. On his way home, though in snow, he comes to a realization that he wants to be a paramedic.</p>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-bar"></div>
-                    </div>
-                    <div class="control">
-                        <button class="play-button">▶ Play</button>
-                        <button class="pause-button">⏸ Pause</button>
-                        <button class="stop-button">⏹ Stop</button>
-                        <label for="speech-speed-1">Speed: </label>
-                        <input type="range" class="speech-speed" min="0.5" max="2" step="0.1" value="1">
-                        <span class="speed-display">1.0x</span>
-                    </div>
-                </div>
-            </ul>
-        </div>
+                    </li>
+                </ul>
+            </div>
 
-        <!-- Version 2.0.2-->
-        <div class="changelog">
-            <h2>Chapter 2</h2>
-            <ul>
-                <div class="text-section" data-id="2">
-                    <div class="text-to-read">
+            <!-- Chapter 2 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 2:</h2>
+                <ul>
+                    <li>
                         <p>At the Elgin Theatre, only a few were remaining behind. The woman was washing costumes, the man was doing some ironing, the actress was drinking tequila, the stagehand was mopping up the floor, while the caregiver was pacifying a whimpering child.</p>
+                    </li>
+                    <li>
                         <p>About Arthur's family, they talked in the lobby, finding out he had a son in Israel by the name of Tyler and several ex-wives. They decided to call his lawyer to cover his death.</p>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-bar"></div>
-                    </div>
-                    <div class="control">
-                        <button class="play-button">▶ Play</button>
-                        <button class="pause-button">⏸ Pause</button>
-                        <button class="stop-button">⏹ Stop</button>
-                        <label for="speech-speed-1">Speed: </label>
-                        <input type="range" class="speech-speed" min="0.5" max="2" step="0.1" value="1">
-                        <span class="speed-display">1.0x</span>
-                    </div>
-                </div>
-            </ul>
-        </div>
+                    </li>
+                    <li>
+                        <p>They toasted to the absent Arthur and then disappeared into the snow. Backstage, Tanya gave Kirsten a glass paperweight with a storm cloud inside it. The bartender was the last one to leave and died three weeks later.</p>
+                    </li>
+                </ul>
+            </div>
 
-    </div>
-    
-    <script src="obfuscated-high.js"></script>
+            <!-- Chapter 3 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 3:</h2>
+                <ul>
+                    <li>
+                        <p>Jeevan walked around Allan Gardens in the hot house while the snow fell outside. He admired the plants and considered visiting his brother Frank to talk over the death of Arthur.</p>
+                    </li>
+                    <li>
+                        <p>After leaving, he took a streetcar home, remembering Arthur and his friend Hua, who warned him about the Georgia Flu spreading fast.</p>
+                    </li>
+                    <li>
+                        <p>Afraid for his life, Jeevan flees town. He stops at an ramen/grocery store to load up on supplies, and also tries calling Laura, his girlfriend, to warn her; she thinks he is overreacting. "You really ought to get out before it's too late," he said.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 4 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 4:</h2>
+                <ul>
+                    <li>
+                        <p>The only ones present in the Elgin Theatre that night were the security guard and the producer, who promptly called Arthur's lawyer with the news of his death. The latter spent two hours going over Arthur's will and promptly called Arthur's close friend at dawn, who in turn called Arthur's ex-wives that morning.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 5 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 5:</h2>
+                <ul>
+                    <li>
+                        <p>Working in Malaysia, Miranda received news that Arthur, the love of her life, died of a heart attack on stage during a play. It comes so ordinarily, leaving her to sort through the loss, to remember the truth that life goes on. Alone, she looks out at the ships far off, their lights illuminating across the waterways.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 6 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 6:</h2>
+                <ul>
+                    <li>
+                        <p>Everything from everyday objects is lost. There's no swimming, no night games, no cities. Movies and concerts are extremely seldom; medicines are non-existent. There's limited air travel; planes are used for storage. There are no more borders, no more emergency services. The internet's gone, so people cannot connect through the internet anymore.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 7 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 7:</h2>
+                <ul>
+                    <li>
+                        <p>Twenty years after air travel ended, the Traveling Symphony moved slowly through the heat near Lake Michigan. They walked to rest the horses and practiced lines from King Lear.</p>
+                    </li>
+                    <li>
+                        <p>Kirsten remembered Arthur Leander, who gave her two special comics. She and August spoke about their past, the old technology that interested them. The Symphony continued to play their music and Shakespeare while journeying.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 8 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 8:</h2>
+                <ul>
+                    <li>
+                        <p>Kirsten has memorized two rare comics: Dr. Eleven, given to her by Arthur Leander. "They're about Dr. Eleven, a physicist on this beautiful space station." There were only ten copies, and they have become worn. One image shows him with this weird dog named Luli, contemplating Earth.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 9 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 9:</h2>
+                <ul>
+                    <li>
+                        <p>The Symphony makes it to St. Deborah, where they left Charlie pregnant. A guard there tells them to camp at the local Walmart, but there is nobody in the town. While rehearsing A Midsummer Night's Dream with her ex, Sayid, Kirsten becomes worried about Charlie.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 10 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 10:</h2>
+                <ul>
+                    <li>
+                        <p>There's some tension within the ranks with the Traveling Symphony, but love of music ultimately keeps them together. Kirsten searches for her friend Charlie and learns Charlie has left town with her family. She sees grave markers but finds they have escaped. The Symphony hears of an epidemic and changes in leadership of the town.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 11 -->
+            <div class="chapter">
+                <h2>Chapter 11:</h2>
+                <ul>
+                    <li>
+                        <p>In a post-apocalyptic town, Kirsten performs as Titania in A Midsummer Night’s Dream. The Traveling Symphony values art and carries the motto “Because survival is not enough.”</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 12 -->
+            <!-- Revised -->
+            <div class="chapter">
+                <h2>Chapter 12:</h2>
+                <ul>
+                    <li>
+                        <p>After Kirsten's show, a man remembered as the prophet praises the Symphony and speaks on future dangers due to the flu. The conductor hears word of new rules leaving town. While leaving the town, the group discusses what risk lies ahead, while Kirsten reflects on memories of the past.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 13 -->
+            <div class="chapter">
+                <h2>Chapter 13:</h2>
+                <ul>
+                    <li>
+                        <p>In a Toronto restaurant, actor Arthur Leander meets Miranda, a young woman leaving her boyfriend. He offers her a place to stay, sparking questions about their relationship.</p>
+                    </li>
+                    <li>
+                        <p>As Arthur thinks about his fame, he reconnects with Miranda, now an art student, showing their different lives and true connection.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 14 -->
+            <div class="chapter">
+                <h2>Chapter 14:</h2>
+                <ul>
+                    <li>
+                        <p>Miranda is an admin assistant in Neptune Logistics, who views herself as frumpy next to her stylish friend, Thea. Unhappy with her boyfriend, Pablo, Miranda meets for dinner with Arthur, an old friend and, in the process of breaking up with Pablo, starts an amour with him.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 15 -->
+            <div class="chapter">
+                <h2>Chapter 15:</h2>
+                <ul> 
+                    <li>
+                        <p>Miranda is upset about her failing marriage to Arthur after seeing him with another woman, Elizabeth. She considers leaving but faces her feelings instead.</p>
+                    </li>
+                    <li>
+                        <p>She later feels alienated at home and finds Elizabeth drunk. Indeed, a photographer makes her feel vulnerable, but she warms up with Elizabeth, and they chat. Miranda more or less accepts her divorce and considers her future.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 16 -->
+            <div class="chapter">
+                <h2>Chapter 16:</h2>
+                <ul>
+                    <li>
+                        <p>Francois Diallo interviews Kirsten Raymonde twenty-six years after Miranda and Arthur's last dinner party. Diallo started a newspaper and is seeking local stories since the majority of the population does not travel any more. Raymonde mentions some comics she showed him, which were given to her from Arthur Leander.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 17 -->
+            <div class="chapter">
+                <h2>Chapter 17:</h2>
+                <ul>
+                    <li>
+                        <p>One year before the outbreak of the Georgia Flu epidemic, Clark was having dinner with his longtime friend Arthur in London. The way to the restaurant was a hassle for Clark, and after he finally arrived, he found that instead of talking with him, Arthur was interested in putting on a show. This made Clark feel so disappointed because he remembered how much their relationship had gone through since their days.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 18 -->
+            <div class="chapter">
+                <h2>Chapter 18:</h2>
+                <ul>
+                    <li>
+                        <p>In an interview, Raymonde discusses her early acting career and memory issues from the collapse. She joined the Symphony at fourteen after losing her brother and describes a failed expedition to Ohio. Raymonde notes that while some towns are organized, others are chaotic or ruled by cults, leading to her frustration over their illogical beliefs and memories of lost family.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Chapter 19 -->
+            <div class="chapter">
+                <h2>Chapter 19:</h2>
+                <ul>
+                    <li>
+                        <p>The Traveling Symphony often found themselves torn between the risky mission of keeping art alive and well. After finding a stowaway, Eleanor, who had run away from a prophet looking for a wife, they debated returning her or risking charges of kidnapping. Eleanor did name the Museum of Civilization as a possible destination; the fear was it could be a trap.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 20 -->
+            <div class="chapter">
+                <h2>Chapter 20:</h2>
+                <ul>
+                    <li>
+                        <p>Two days from St. Deborah, the Symphony came onto a resort town that had burned down to the ground: completely overgrown with wildlife, including pink flowers. They shot two deer for food and grazed their horses at a nearby baseball field.</p>
+                    </li>
+                    <li>
+                        <p>Kirsten, Jackson, and Viola toured a school that was deserted, with all the evidence of what had once taken place there. That included a gym used for shelter and even a skeleton in the bathroom. They picked up a jar of rosin and a flute mouthpiece but found mostly nothingness. Kirsten returned to the Symphony to belittle what they found, particularly the skeleton in preparation for their departure.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 21 -->
+            <div class="chapter">
+                <h2>Chapter 21:</h2>
+                <ul>
+                    <li>
+                        <p>François Diallo asks Kirsten Raymonde in an interview to speak about her childhood with the Georgia Flu and about how the world has changed since then. She doesn't answer. He asks her about the tattoos of knives. She won't explain and tells him he should know better than to ask.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 22 -->
+            <div class="chapter">
+                <h2>Chapter 22:</h2>
+                <ul>
+                    <li>
+                        <p>Kirsten reflects on how the world changed-mostly through Alexandra, who is a young girl that has not experienced the explicit violence. During the tour of the Symphony through a countryside, a storm is coming. Kirsten tent-shares with Dieter, who dreams of seeing airplanes-as a sign of a lost civilization. During night-watches, they notice something weird: noise. They go to check from where it was, but only found remnants of some stuff left behind by their lost scouts, Dieter and Sayid, which gave them a very ominous feeling across the woods. </p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 23 -->
+            <div class="chapter">
+                <h2>Chapter 23:</h2>
+                <ul>
+                    <li>
+                        <p>The Symphony combs the woods for the missing Sayid and Dieter, but when night falls, despair deepens, and Sidney disappears too. A note left amongst her belongings suggests she's tired. They fish for food in a golf course, then discover that the Symphony has moved on without them. It pushes them further into their isolation as they sleep under an overpass, haunted by the absence of their friends.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 24 -->
+            <div class="chapter">
+                <h2>Chapter 24:</h2>
+                <ul>
+                    <li>
+                        <p>On their own without the Symphony, Kirsten and August come across a gas station run by a man named Finn, who has a scar on his face. Filling their water bottles, they go into an untouched house to find remains of a family, which puts August silently into pray for the dead. While collecting goods, Kirsten goes on a little reflection about wanting a certain book, stating what it means for her in this all-but-empty-of-people world.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 25 -->
+            <div class="chapter">
+                <h2>Chapter 25:</h2>
+                <ul>
+                    <li>
+                        <p>In letters to V., A. describes his loneliness in Toronto; he reflects on his friendship with V. as he navigates his struggles as a would-be actor along with the many complications of marriage and love. Distance aside, A. yearns to reconnect with his friend and reminisce about times past.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 26 -->
+            <div class="chapter">
+                <h2>Chapter 26:</h2>
+                <ul>
+                    <li>
+                        <p>It is here that Elizabeth calls him one morning to inform him that they are the featured case in a book about their lives-a fact that infuriates her and maybe even justifies legal action. While getting ready for a meeting, Clark considers his work as an executive coach and questions whether true change for those living unfulfilling lives is possible. This leads him to realize that he himself has been sleepwalking through life, longing for deeper connection and meaning.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 27 -->
+            <div class="chapter">
+                <h2>Chapter 27:</h2>
+                <ul>
+                    <li>
+                        <p>The disenchanted paparazzo, Jeevan Chaudhary, attempts to break into entertainment journalism by interviewing actor Arthur Leander. The interview is awkward, and Arthur comes off uninterested and fatigued. Arthur says he is leaving his wife for another woman, Lydia Marks, asking Jeevan to keep it confidential and thus putting him in a moral dilemma about the sensitivity of the story versus his career ambitions.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 28 -->
+            <div class="chapter">
+                <h2>Chapter 28:</h2>
+                <ul>
+                    <li>
+                        <p>Eight days after Arthur's death, Jeevan Chaudhary lies on his brother's sofa in Toronto trying to remember the last time they'd encountered each other. The world outside is falling apart, but he remembers little pleasures-what a cappuccino will taste like-and ponders his girl and apartment in Cabbagetown and whether he will ever see them again.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 29 -->
+            <div class="chapter">
+                <h2>Chapter 29:</h2>
+                <ul>
+                    <li>
+                        <p>Jeevan, he was proud of the fact that he didn't let out the split of Arthur and Elizabeth until 24 hours had passed since their interview. He remembered his past life as a paparazzo with one guilt-laden moment when he had clicked an unflattering photo of Arthur's first wife. In the wintery city, those memories were strange to him.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 30 -->
+            <div class="chapter">
+                <h2>Chapter 30:</h2>
+                <ul>
+                    <li>
+                        <p>Jeevan and Frank hole up in their apartment, where society has fallen apart-sealing off the space, avoiding contact with people. As the news grows worse and the cities go dark, Frank works on a memoir while Jeevan ruminates on the brittleness of civilization. Thin supplies and dead lights bring normalcy into Jeevan's hopes but Frank doubts him.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 31 -->
+            <div class="chapter">
+                <h2>Chapter 31:</h2>
+                <ul>
+                    <li>
+                        <p>Kirsten Raymonde remembers: in Toronto, on the night of the collapse, she was acting in King Lear, in which the lead actor, Arthur Leander, died of a heart attack on stage; how he was always gentle to her and that unnamed audience member who rushed forward.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Chapter 32 -->
+            <div class="chapter">
+                <h2>Chapter 32:</h2>
+                <ul>
+                    <li>
+                        <p>Day Forty-Seven, and here Jeevan sees smoke rising far in the distance, realizing just how modern their situation has been. With food supplies dwindling, he considers leaving-but Frank suspects they don't know enough about survival and would be the first to depart, creating tension in their relationship. </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Chapter 33 -->
+            <div class="chapter">
+                <h2>Chapter 33:</h2>
+                <ul>
+                    <li>
+                        <p>Raymonde remembers the night Arthur Leander collapsed center stage, the unknown man performing CPR. A babysitter took her home to her brother Peter after she couldn't get a hold of her parents, whom she would never see again, no doubt succumbing to illness after waiting in the ER.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 34 -->
+            <div class="chapter">
+                <h2>Chapter 34:</h2>
+                <ul>
+                    <li>
+                        <p>On the fifty-eighth day, Jeevan asked Frank to read about what a philanthropist had to say about celebrity charity. Frank mentioned how actors primarily wanted to be famous and not because of altruism, then reflected on how immortality through film and the need to be remembered can work.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 35 -->
+            <div class="chapter">
+                <h2>Chapter 35:</h2>
+                <ul>
+                    <li>
+                        <p>Kirsten Raymonde remembered hiding in the basement, while her brother foraged for food. Later, they became stuck in traffic and walked east into the U.S. without a destination in mind.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 36 -->
+            <div class="chapter">
+                <h2>Chapter 36:</h2>
+                <ul>
+                    <li>
+                        <p>Jeevan followed the lake with the thought that it would keep him away from people as he left his apartment. Traveling with three survivors, he parted his ways and continued alone, repeating "Keep walking" to hold onto his identity in desolation.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 37 -->
+            <div class="chapter">
+                <h2>Chapter 37:</h2>
+                <ul>
+                    <li>
+                        <p>Raymonde remembers little about life before the collapse; she recalls only fragments of old comforts: fridges. She thinks that children adjusted more easily, for they have less to miss than adults.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 38 -->
+            <div class="chapter">
+                <h2>Chapter 38:</h2>
+                <ul>
+                    <li>
+                        <p>The post-apocalyptic Kirsten and August ride, talking about parallel worlds and all the comforts they'd lost. They make camp outside Severn City and stumble upon a scar in the shape of an airplane, reminding them of the old world.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 39 -->
+            <div class="chapter">
+                <h2>Chapter 39:</h2>
+                <ul>
+                    <li>
+                        <p>Two weeks before the stopping of air travel, Miranda flew from New York to Toronto. After passport control, she met her ex-husband Arthur's call regarding his father's death. Thus, their reunion uncovers their complicated history, including Arthur's upcoming book of letters that mention Miranda.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 40 -->
+            <div class="chapter">
+                <h2>Chapter 40:</h2>
+                <ul>
+                    <li>
+                        <p>Two weeks before the world changed, Miranda was at a beach in Malaysia, wholly unaware of an oncoming pandemic. Meanwhile, in New York, Clark learns about Arthur's death as a result of a heart attack and starts to reach out to his family and ex-wives. Both were on a course to head toward Arthur's funeral in Toronto as the Georgia Flu continued to spread.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 41 -->
+            <div class="chapter">
+                <h2>Chapter 41:</h2>
+                <ul>
+                    <li>
+                        <p>Miranda looks back at Arthur's death while confined in her empty hotel during a flu outbreak. Feverish, she tries to escape and finally wanders out onto the beach at sunrise, only to find comfort from her isolation in faraway ships that may be safe.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 42 -->
+            <div class="chapter">
+                <h2>Chapter 42:</h2>
+                <ul>
+                    <li>
+                        <p>At Severn City Airport, people anticipated a short layover but had to adjust to years of transformation. Clark recalls a world before the pandemic, whereas Emmanuelle has known only this new reality, as fear grows among the remaining travelers.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 43 -->
+            <div class="chapter">
+                <h2>Chapter 43:</h2>
+                <ul>
+                    <li>
+                        <p>Clark and the survivors in the airport face despair and isolation but connect with one another through their common struggles. The introduction of a stranger brings both fear and hope for life beyond their prison.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 44 -->
+            <div class="chapter">
+                <h2>Chapter 44:</h2>
+                <ul>
+                    <li>
+                        <p>In Year Fifteen, three hundred people lived in the airport. Clark took care of the Museum of Civilization while Tyler read to the dead. Hope arrived in the form of a trader who brought them newspapers from New Petoskey, linking them to the world beyond.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 45 -->
+            <div class="chapter">
+                <h2>Chapter 45:</h2>
+                <ul>
+                    <li>
+                        <p>Meanwhile, in Year Fifteen, Kirsten is interviewed and tells of her killing experiences and the death of her brother. François discovers that she wishes some memories never to be recorded. The Symphony readies a Beethoven symphony and the crowd grows hushed.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 46 -->
+            <div class="chapter">
+                <h2>Chapter 46:</h2>
+                <ul>
+                    <li>
+                        <p>During Year 15, while continuing further on her main quest Eward’s wife is rescued by Jeevan Chaudhary from the clutches of an extreme prophet who had shot her. Indeed, Edward disclosed the circumstances in which the prophet took his wife hostage to obtain ammunition. Within tensions of the local conflict, as stated above, Jeevan went about his duty with a lot of thoughts on what the future had in store.?</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 47 -->
+            <div class="chapter">
+                <h2>Chapter 47:</h2>
+                <ul>
+                    <li>
+                        <p>In Year Nineteen, seventy-year-old Clark, grieving Annette, observes the tarmac with Garrett, discussing corporate speak, then welcomes a new group of eighty-one, which includes Charlie, Jeremy and baby Annabel, who talks about a prophet that makes Clark question Elizabeth’s fate, amplifying his grief.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 48 -->
+            <div class="chapter">
+                <h2>Chapter 48:</h2>
+                <ul>
+                    <li>
+                        <p>Three days later, Kirsten and August arrived in Severn City, where Sayid, still injured after being hung from a pole in the smoldering jungle redoubt, managed to steal away with them from the armed men. Dieter had died in the raid, Sayid told her, crushed by his own truck under the weight of his stolen supplies, sending her into a gutter lap of grief.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 49 -->
+            <div class="chapter">
+                <h2>Chapter 49:</h2>
+                <ul>
+                    <li>
+                        <p>The clarinet, who loathed the Symphony’s Bardolatry, set about composing a play for the modern age. Imprisoned by the prophet’s hounds, she ultimately escaped, alerting the Symphony as to their course only hours before a twister’s onslaught.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Chapter 50-55 -->
+            <div class="chapter">
+                <h2>Chapter 50-55:</h2>
+                <ul>
+                    <li>
+                        <p>Details about this chapter are yet to be explored.</p>
+                    </li>
+                </ul>
+            </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Content inspired by Emily St. John Mandel's <em>Station Eleven</em>. All rights belong to the original copyright holder.</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="chapter.js"></script>
+    <script src="../dark-mode/dark-mode.js"></script>
 </body>
 </html>
