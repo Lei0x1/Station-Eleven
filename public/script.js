@@ -1,12 +1,16 @@
+// Get canvas and context
 const canvas = document.getElementById('particleCanvas');
 const ctx = canvas.getContext('2d');
 
+// Set canvas size
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Initialize particles array
 let particlesArray = [];
 const numberOfParticles = 100; // Adjust the number of particles here
 
+// Particle Class
 class Particle {
     constructor(x, y) {
         this.x = x;
@@ -16,31 +20,40 @@ class Particle {
         this.speedY = Math.random() * 3 - 1.5; // Random speed in Y
     }
 
+    // Update particle position and size
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
         if (this.size > 0.2) this.size -= 0.1; // Size reduction over time
     }
 
+    // Draw particle
     draw() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)'; // Particle color
+        ctx.fillStyle = document.body.classList.contains("dark-mode") 
+            ? 'rgba(255, 255, 255, 0.5)' // White color for dark mode
+            : 'rgba(0, 0, 0, 0.5)'; // Black color for light mode
+
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
     }
 }
 
+// Initialize particles
 function init() {
+    particlesArray = []; // Clear particles array to avoid duplicates
     for (let i = 0; i < numberOfParticles; i++) {
         particlesArray.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
     }
 }
 
+// Animation loop
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     particlesArray.forEach((particle, index) => {
         particle.update();
         particle.draw();
+        // Remove and replace small particles
         if (particle.size <= 0.3) {
             particlesArray.splice(index, 1);
             particlesArray.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
@@ -49,24 +62,20 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
+// Add particles at cursor on mousemove
 window.addEventListener('mousemove', (event) => {
     const x = event.x;
     const y = event.y;
-    for (let i = 0; i < 1; i++) { // Number of particles to create per mouse move
-        particlesArray.push(new Particle(x, y));
-    }
+    particlesArray.push(new Particle(x, y));
 });
 
-init();
-animate();
-
+// Chapter interactions
 document.addEventListener('DOMContentLoaded', function() {
     const chapters = document.querySelectorAll('.chapter');
 
     // Function to handle adding/removing active class
     const handleChapterClick = (chapter) => {
         chapter.classList.toggle('active');
-
         // Remove active class from other chapters
         chapters.forEach(other => {
             if (other !== chapter) {
@@ -100,3 +109,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for scroll events
     window.addEventListener('scroll', fadeInOnScroll);
 });
+
+// Initialize particles and start animation
+init();
+animate();
+
+// Adjust canvas size on window resize
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init(); // Reinitialize particles
+});
+
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("show");
+}
