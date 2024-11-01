@@ -1,3 +1,7 @@
+/* changelog.css */
+/* ============= */
+/* Global Styles */
+/* ============= */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #eef2f3;
@@ -14,67 +18,125 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px; /* Increased padding for easier clicking */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+/* ======= */
+/* Headers */
+/* ======= */
+h1, h2 {
+    color: #333;
+    text-align: center;
 }
 
 h1 {
     font-size: 4em;
-    text-align: center;
     margin-bottom: 20px;
-    color: #333;
     letter-spacing: 1px;
 }
-
-.navigation-bar {
-    align-items: center;
-    display: flex;
-    font-size: small;
-    background-color: rgba(208, 208, 208, 0.8);
-    color: black;
-}
-
-a:hover {
-    background-color: rgba(100, 100, 100, 0.3); /* Add hover effect */
-}
-
-a.home-bar, a.changelog-bar {
-    text-decoration: none;
-    font-size: small;
-    color: black;
-    padding: 3px 8px;
-}
-
 
 h2 {
     font-size: 1.5em;
     margin-top: 0;
-    color: #4a4a4a;
     padding-bottom: 5px;
 }
 
-h2.author {
+h2.author, h2.create-by {
     text-align: center;
     font-size: large;
 }
 
+h2.author {
+    font-size: large;
+}
+
 h2.create-by {
-    text-align: center;
     font-size: small;
 }
 
-p {
-    margin: 0 0 15px;
-    color: #555;
-    text-align: justify;
+/* =============== */
+/* Title Animation */
+/* =============== */
+#changelog {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
 }
 
-p.release-date {
-    font-size: 0.9em;
-    color: #888;
-    margin-top: 0;
-    font-style: italic;
-    text-align: left;
+#changelog span {
+    display: inline-block;
+    animation: fade 4s infinite;
+    opacity: 1;
 }
 
+@keyframes fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#changelog span:nth-child(1) { animation-delay: 0s; }
+#changelog span:nth-child(2) { animation-delay: 0.1s; }
+#changelog span:nth-child(3) { animation-delay: 0.2s; }
+#changelog span:nth-child(4) { animation-delay: 0.3s; }
+#changelog span:nth-child(5) { animation-delay: 0.4s; }
+#changelog span:nth-child(6) { animation-delay: 0.5s; }
+#changelog span:nth-child(7) { animation-delay: 0.6s; }
+#changelog span:nth-child(8) { animation-delay: 0.7s; }
+#changelog span:nth-child(9) { animation-delay: 0.8s; }
+
+/* ============== */
+/* Navigation Bar */
+/* ============== */
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: small;
+    background-color: rgba(208, 208, 208, 0.8);
+    color: black;
+    z-index: 2;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    background-color: rgba(208, 208, 208, 0.8);
+}
+
+.nav-links a {
+    color: black;
+}
+
+a:hover {
+    background-color: rgba(100, 100, 100, 0.3);
+}
+
+a.home-bar, a.changelog-bar, a.chapter-bar, a.character-bar {
+    text-decoration: none;
+    font-size: small;
+    color: black;
+    padding: 3px 6px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ========= */
+/* Changelog */
+/* ========= */
 .changelog {
     margin-bottom: 30px;
     padding: 20px;
@@ -95,6 +157,26 @@ p.release-date {
     transform: translateY(0);
 }
 
+/* ==== */
+/* Text */
+/* ==== */
+p {
+    margin: 0 0 15px;
+    color: #555;
+    text-align: justify;
+}
+
+p.release-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 0;
+    font-style: italic;
+    text-align: left;
+}
+
+/* ===== */
+/* Lists */
+/* ===== */
 ul {
     padding-left: 20px;
 }
@@ -103,6 +185,9 @@ li {
     margin-bottom: 10px;
 }
 
+/* ================= */
+/* Background Canvas */
+/* ================= */
 canvas {
     position: fixed;
     top: 0;
@@ -110,24 +195,42 @@ canvas {
     width: 100%;
     height: 100%;
     z-index: -1;
+    pointer-events: none;
 }
 
+/* ================= */
 /* Responsive Design */
+/* ================= */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
     }
-
     .changelog h2 {
         font-size: 1.7rem;
     }
-
     .changelog p {
         font-size: 1rem;
     }
-
     .container {
         padding: 15px;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(208, 208, 208, 0.9);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
     }
 }
 
@@ -135,66 +238,10 @@ canvas {
     h1 {
         font-size: 2rem;
     }
-
     .changelog h2 {
         font-size: 1.5rem;
     }
-
     .changelog p {
         font-size: 0.95rem;
     }
-}
-
-/* Animation for fade-out and fade-in effect */
-@keyframes fade {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
-/* Styling for the title */
-#changelog {
-    font-family: 'Arial', sans-serif;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-}
-
-#changelog span {
-    display: inline-block;
-    animation: fade 4s infinite;
-    opacity: 1;
-}
-
-/* Delay for each letter's animation */
-#changelog span:nth-child(1) {
-    animation-delay: 0s;
-}
-#changelog span:nth-child(2) {
-    animation-delay: 0.1s;
-}
-#changelog span:nth-child(3) {
-    animation-delay: 0.2s;
-}
-#changelog span:nth-child(4) {
-    animation-delay: 0.3s;
-}
-#changelog span:nth-child(5) {
-    animation-delay: 0.4s;
-}
-#changelog span:nth-child(6) {
-    animation-delay: 0.5s;
-}
-#changelog span:nth-child(7) {
-    animation-delay: 0.6s;
-}
-#changelog span:nth-child(8) {
-    animation-delay: 0.7s;
-}
-#changelog span:nth-child(9) {
-    animation-delay: 0.8s;
 }

@@ -23,7 +23,9 @@ class Particle {
     }
 
     draw() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)'; // Particle color
+        ctx.fillStyle = document.body.classList.contains("dark-mode") 
+            ? 'rgba(255, 255, 255, 0.5)' // White color for dark mode
+            : 'rgba(0, 0, 0, 0.5)'; // Black color for light mode
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -129,3 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for scroll events
     window.addEventListener('scroll', fadeInOnScroll);
 });
+
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("show");
+}
