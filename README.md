@@ -12,14 +12,16 @@ The **Station Eleven Project** is an interactive website adaptation of Station E
 
 | Features | Version | Description |
 |----------|---------|-------------|
-| **Responsive Design**         | v1.0.0 | Accessible across various devices. |
-| **Interactive Navigation**    | v1.1.0 | Easy navigation with links to Home and Changelog pages. |
-| **Particle Animations**       | v1.1.0 | Animated background for enhanced visuals. |
-| **Documentation**             | v2.0.0 | Comprehensive documentation on GitHub. |
-| **Firebase Migration**        | v2.0.0 | Successful migration from Netlify to Firebase |
-| **New Chapters**              | v2.1.2 | Weekly updated summaries for freshness. Added Chapters 41-49 to the narrative.|
-| **Chapter Navigation Update** | v2.1.2 | Relocated chapter series to a dedicated Chapter section. |
-| **Dark Mode Functionality**   | v2.1.2 | Implemented Dark Mode for enhanced user experience. |
+| **Responsive Design**                         | v1.0.0 | Accessible across various devices. |
+| **Interactive Navigation**                    | v1.1.0 | Easy navigation with links to Home and Changelog pages. |
+| **Particle Animations**                       | v1.1.0 | Animated background for enhanced visuals. |
+| **Documentation**                             | v2.0.0 | Comprehensive documentation on GitHub. |
+| **Firebase Migration**                        | v2.0.0 | Successful migration from Netlify to Firebase |
+| **New Chapters**                              | v2.1.2 | Weekly updated summaries for freshness. Added Chapters 41-49 to the narrative.|
+| **Chapter Navigation Update**                 | v2.1.2 | Relocated chapter series to a dedicated Chapter section. |
+| **Dark Mode Functionality**                   | v2.1.2 | Implemented Dark Mode for enhanced user experience. |
+| **Finish Chapter Summary, Fullbook Summary**  | v2.2.2 | Finished 55 chapters summary, and added full book summary |
+| **Characters & Themes**                       | v2.3.2 | Completed Characters, and Themes |
 
 ## Future Updates
 
